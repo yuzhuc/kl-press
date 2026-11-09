@@ -5379,9 +5379,9 @@ var $fetch$1 = createFetch({
 	Headers: globalThis.Headers || n,
 	AbortController: globalThis.AbortController || T$1
 });
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Ffetch.mjs
+// virtual:nuxt:.nuxt%2Ffetch.mjs
 if (!globalThis.$fetch) globalThis.$fetch = $fetch$1.create({ baseURL: baseURL() });
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fglobal-polyfills.mjs
+// virtual:nuxt:.nuxt%2Fglobal-polyfills.mjs
 if (!("global" in globalThis)) globalThis.global = globalThis;
 // node_modules/.bun/nuxt@4.6.4+b87f3485fad8f469/node_modules/nuxt/dist/head/runtime/island-head.js
 /**
@@ -5428,8 +5428,8 @@ var generateRouteKey$1 = (routeProps, override) => {
 function toArray(value) {
 	return Array.isArray(value) ? value : [value];
 }
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Froute-rules.mjs
-var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froute_rules_default = () => ({});
+// virtual:nuxt:.nuxt%2Froute-rules.mjs
+var virtual_nuxt__nuxt_2Froute_rules_default = () => ({});
 // node_modules/.bun/nuxt@4.6.4+b87f3485fad8f469/node_modules/nuxt/dist/app/components/utils.js
 var ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
 var ROUTE_KEY_SYMBOLS_RE = /(:\w+)[?+*]/g;
@@ -5501,7 +5501,7 @@ function _calculatePosition(to, from, savedPosition, defaultHashScrollBehaviour)
 		top: 0
 	};
 }
-var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default = {
+var virtual_nuxt__nuxt_2Frouter_options_default = {
 	hashMode: false,
 	scrollBehaviorType: "auto",
 	sensitive: false,
@@ -5533,7 +5533,7 @@ var manifestDiagnostics = /* #__PURE__ */ defineProdDiagnostics({
 });
 // node_modules/.bun/nuxt@4.6.4+b87f3485fad8f469/node_modules/nuxt/dist/app/composables/manifest.js
 function routeRulesMatcher(path) {
-	return virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froute_rules_default();
+	return virtual_nuxt__nuxt_2Froute_rules_default();
 }
 function getRouteRules(arg) {
 	const path = typeof arg === "string" ? arg : arg.path;
@@ -5547,7 +5547,7 @@ function getRouteRules(arg) {
 		return {};
 	}
 }
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fmiddleware.mjs
+// virtual:nuxt:.nuxt%2Fmiddleware.mjs
 var globalMiddleware = [middleware$1, /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
 	if (!useNuxtApp().ssrContext?.islandContext) return;
 	const rules = getRouteRules({ path: to.path });
@@ -6799,8 +6799,8 @@ function useLocalePageMeta(path, title, description, options = {}) {
 		}]
 	}));
 }
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Froutes.mjs
-var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [{
+// virtual:nuxt:.nuxt%2Froutes.mjs
+var virtual_nuxt__nuxt_2Froutes_default = [{
 	name: "language-dashboard",
 	path: "/:language()/dashboard",
 	meta: { validate: (route) => i18n.hasLocale(String(route.params.language)) },
@@ -6818,25 +6818,25 @@ var plugin$1 = /* @__PURE__ */ defineNuxtPlugin({
 	async setup(nuxtApp) {
 		let __temp, __restore;
 		let routerBase = (/* @__PURE__ */ useRuntimeConfig()).app.baseURL;
-		const history = virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default.history?.(routerBase) ?? createMemoryHistory(routerBase);
-		const routes = virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default.routes ? ([__temp, __restore] = executeAsync(() => virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default.routes(virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default)), __temp = await __temp, __restore(), __temp) ?? virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default : virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default;
+		const history = virtual_nuxt__nuxt_2Frouter_options_default.history?.(routerBase) ?? createMemoryHistory(routerBase);
+		const routes = virtual_nuxt__nuxt_2Frouter_options_default.routes ? ([__temp, __restore] = executeAsync(() => virtual_nuxt__nuxt_2Frouter_options_default.routes(virtual_nuxt__nuxt_2Froutes_default)), __temp = await __temp, __restore(), __temp) ?? virtual_nuxt__nuxt_2Froutes_default : virtual_nuxt__nuxt_2Froutes_default;
 		let startPosition;
 		const router = createRouter({
-			...virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default,
+			...virtual_nuxt__nuxt_2Frouter_options_default,
 			scrollBehavior: (to, from, savedPosition) => {
 				if (from === START_LOCATION) {
 					startPosition = savedPosition;
 					return;
 				}
-				if (virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default.scrollBehavior) {
-					router.options.scrollBehavior = virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default.scrollBehavior;
+				if (virtual_nuxt__nuxt_2Frouter_options_default.scrollBehavior) {
+					router.options.scrollBehavior = virtual_nuxt__nuxt_2Frouter_options_default.scrollBehavior;
 					if ("scrollRestoration" in (void 0).history) {
 						const unsub = router.beforeEach(() => {
 							unsub();
 							(void 0).history.scrollRestoration = "manual";
 						});
 					}
-					return virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default.scrollBehavior(to, START_LOCATION, startPosition || savedPosition);
+					return virtual_nuxt__nuxt_2Frouter_options_default.scrollBehavior(to, START_LOCATION, startPosition || savedPosition);
 				}
 			},
 			history,
@@ -6980,7 +6980,7 @@ var plugin$1 = /* @__PURE__ */ defineNuxtPlugin({
 					...resolvedInitialRoute,
 					force: true
 				});
-				router.options.scrollBehavior = virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Frouter_options_default.scrollBehavior;
+				router.options.scrollBehavior = virtual_nuxt__nuxt_2Frouter_options_default.scrollBehavior;
 			} catch (error) {
 				await _showErrorUnlessCrawler(nuxtApp, error);
 			}
@@ -7012,8 +7012,8 @@ var plugin = /* @__PURE__ */ defineNuxtPlugin({
 		for (const [reducer, fn] of reducers) definePayloadReducer(reducer, fn);
 	}
 });
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fcomponents.plugin.mjs
-var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fcomponents_plugin_default = /* @__PURE__ */ defineNuxtPlugin({ name: "nuxt:global-components" });
+// virtual:nuxt:.nuxt%2Fcomponents.plugin.mjs
+var virtual_nuxt__nuxt_2Fcomponents_plugin_default = /* @__PURE__ */ defineNuxtPlugin({ name: "nuxt:global-components" });
 // package/i18n/dist/esm/nuxt.js
 function s(e, n) {
 	if (typeof e.get == "function") return e.get(n);
@@ -7035,12 +7035,12 @@ function _(e, n = {}) {
 		t !== void 0 && (c = w(e, { headers: t }, { cookie: o })), r.vueApp.use(R(e, { locale: c }));
 	};
 }
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fplugins.server.mjs
-var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fplugins_server_default = [
+// virtual:nuxt:.nuxt%2Fplugins.server.mjs
+var virtual_nuxt__nuxt_2Fplugins_server_default = [
 	plugin$2,
 	plugin$1,
 	plugin,
-	virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fcomponents_plugin_default,
+	virtual_nuxt__nuxt_2Fcomponents_plugin_default,
 	/* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
 		_(i18n)(nuxtApp);
 	})
@@ -7224,7 +7224,7 @@ error_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 var error_default = error_vue_vue_type_script_setup_true_lang_default;
-// virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fisland-renderer.mjs
+// virtual:nuxt:.nuxt%2Fisland-renderer.mjs
 var IslandRenderer = () => null;
 // node_modules/.bun/nuxt@4.6.4+b87f3485fad8f469/node_modules/nuxt/dist/app/components/nuxt-root.vue
 var _sfc_main = {
@@ -7287,7 +7287,7 @@ var entry$1 = async function createNuxtAppServer(ssrContext) {
 		ssrContext
 	});
 	try {
-		await applyPlugins(nuxt, virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fplugins_server_default);
+		await applyPlugins(nuxt, virtual_nuxt__nuxt_2Fplugins_server_default);
 		await nuxt.hooks.callHook("app:created", vueApp);
 	} catch (error) {
 		await nuxt.hooks.callHook("app:error", error);
