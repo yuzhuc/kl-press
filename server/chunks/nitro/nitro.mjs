@@ -4131,7 +4131,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "5e1ed7c6-8f2f-4f8d-a125-4dd2b861e970",
+    "buildId": "20489ea5-944f-4fe4-98dd-60c0dcccf52e",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -5157,91 +5157,91 @@ const assets = {
   "/android-chrome-192x192.png": {
     "type": "image/png",
     "etag": "\"388-zjsWbQVx97+UsoRIyTZMVObYWio\"",
-    "mtime": "2026-11-09T16:19:05.808Z",
+    "mtime": "2026-11-09T16:21:51.873Z",
     "size": 904,
     "path": "../public/android-chrome-192x192.png"
   },
   "/android-chrome-512x512.png": {
     "type": "image/png",
     "etag": "\"1084-yyB3f4EpIk70oqt5DzLVLS1gnCE\"",
-    "mtime": "2026-11-09T16:19:05.808Z",
+    "mtime": "2026-11-09T16:21:51.873Z",
     "size": 4228,
     "path": "../public/android-chrome-512x512.png"
+  },
+  "/apple-icon.png": {
+    "type": "image/png",
+    "etag": "\"350-VoTrQ5nxfjRLmZve1Prg0eapcBs\"",
+    "mtime": "2026-11-09T16:21:51.873Z",
+    "size": 848,
+    "path": "../public/apple-icon.png"
   },
   "/favicon.ico": {
     "type": "image/vnd.microsoft.icon",
     "etag": "\"10be-n8egyE9tcb7sKGr/pYCaQ4uWqxI\"",
-    "mtime": "2026-11-09T16:19:05.808Z",
+    "mtime": "2026-11-09T16:21:51.873Z",
     "size": 4286,
     "path": "../public/favicon.ico"
   },
   "/icon.svg": {
     "type": "image/svg+xml",
     "etag": "\"158-otyrwFYiUKsZLRSOBovolwyl4Gg\"",
-    "mtime": "2026-11-09T16:19:05.808Z",
+    "mtime": "2026-11-09T16:21:51.873Z",
     "size": 344,
     "path": "../public/icon.svg"
-  },
-  "/apple-icon.png": {
-    "type": "image/png",
-    "etag": "\"350-VoTrQ5nxfjRLmZve1Prg0eapcBs\"",
-    "mtime": "2026-11-09T16:19:05.808Z",
-    "size": 848,
-    "path": "../public/apple-icon.png"
   },
   "/og.png": {
     "type": "image/png",
     "etag": "\"2d19-1HBwQ5NN7Z2+2eDofhbdJ7Re0pI\"",
-    "mtime": "2026-11-09T16:19:05.808Z",
+    "mtime": "2026-11-09T16:21:51.873Z",
     "size": 11545,
     "path": "../public/og.png"
   },
   "/_nuxt/B1LQimsF.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"f-SvBm/V2wr0KWtK2KeERReH6ucag\"",
-    "mtime": "2026-11-09T16:19:05.801Z",
+    "mtime": "2026-11-09T16:21:51.870Z",
     "size": 15,
     "path": "../public/_nuxt/B1LQimsF.js"
   },
   "/_nuxt/B6nlJKRY.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"178-gqumsR+33+a5B5ZNDEmUbOtsdbc\"",
-    "mtime": "2026-11-09T16:19:05.801Z",
+    "mtime": "2026-11-09T16:21:51.870Z",
     "size": 376,
     "path": "../public/_nuxt/B6nlJKRY.js"
   },
   "/_nuxt/DRJVRWf6.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"196-GdqB7hITOHjPsKRLkjA/33xlySQ\"",
-    "mtime": "2026-11-09T16:19:05.801Z",
+    "mtime": "2026-11-09T16:21:51.870Z",
     "size": 406,
     "path": "../public/_nuxt/DRJVRWf6.js"
   },
   "/_nuxt/entry.D4uV4WYy.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"310-pZ+D/mIvbghdpOXTTWbEfdrTn2M\"",
-    "mtime": "2026-11-09T16:19:05.801Z",
+    "mtime": "2026-11-09T16:21:51.870Z",
     "size": 784,
     "path": "../public/_nuxt/entry.D4uV4WYy.css"
   },
-  "/_nuxt/builds/meta/5e1ed7c6-8f2f-4f8d-a125-4dd2b861e970.json": {
-    "type": "application/json",
-    "etag": "\"58-Euxs8i+1dtk5bvPS79vZ+fj8oIE\"",
-    "mtime": "2026-11-09T16:19:05.795Z",
-    "size": 88,
-    "path": "../public/_nuxt/builds/meta/5e1ed7c6-8f2f-4f8d-a125-4dd2b861e970.json"
-  },
   "/_nuxt/builds/latest.json": {
     "type": "application/json",
-    "etag": "\"47-RBot6WBNbP40OWtBJxsO15ji/2k\"",
-    "mtime": "2026-11-09T16:19:05.798Z",
+    "etag": "\"47-Y4huMdqnnOcnmJjMxgWYjIQyeNo\"",
+    "mtime": "2026-11-09T16:21:51.866Z",
     "size": 71,
     "path": "../public/_nuxt/builds/latest.json"
+  },
+  "/_nuxt/builds/meta/20489ea5-944f-4fe4-98dd-60c0dcccf52e.json": {
+    "type": "application/json",
+    "etag": "\"58-2B8UWhMro/jYVuyn+y5x9hnBLHI\"",
+    "mtime": "2026-11-09T16:21:51.864Z",
+    "size": 88,
+    "path": "../public/_nuxt/builds/meta/20489ea5-944f-4fe4-98dd-60c0dcccf52e.json"
   },
   "/_nuxt/x4G6fgzo.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"30d33-1bBwwmInpaj495Gicegr/v7B9vY\"",
-    "mtime": "2026-11-09T16:19:05.801Z",
+    "mtime": "2026-11-09T16:21:51.870Z",
     "size": 199987,
     "path": "../public/_nuxt/x4G6fgzo.js"
   }
