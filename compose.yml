@@ -1,0 +1,15 @@
+services:
+  bun-nuxt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bun-nuxt
+    container_name: bun-nuxt
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      # 站点域名，canonical / hreflang / sitemap 用它拼绝对地址（运行时读取）
+      NUXT_PUBLIC_SITE_URL: ""
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

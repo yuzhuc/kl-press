@@ -1,0 +1,42 @@
+export type DateFormat = 'short' | 'medium' | 'long' | 'full' | 'relative';
+export type TimeFormat = Exclude<DateFormat, 'relative'>;
+export type FormatOptions = {
+    timeZone?: string;
+};
+export declare function formatDate(value: Date | string | number, locale: string, format?: DateFormat, options?: FormatOptions): string;
+export declare function formatTime(value: Date | string | number, locale: string, format?: TimeFormat, options?: FormatOptions): string;
+export declare function formatDateTime(value: Date | string | number, locale: string, format?: TimeFormat, options?: FormatOptions): string;
+export declare function formatRelativeDate(date: Date | string | number, locale: string, now?: Date | number): string;
+export type LocaleNameType = 'language' | 'region' | 'script' | 'currency' | 'calendar' | 'dateTimeField';
+export type Duration = {
+    years?: number;
+    months?: number;
+    weeks?: number;
+    days?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
+    milliseconds?: number;
+    microseconds?: number;
+    nanoseconds?: number;
+};
+export declare function formatLocaleName(code: string, inLocale: string, type?: LocaleNameType): string;
+export declare function formatDuration(duration: Duration, locale: string): string;
+export type ListType = 'conjunction' | 'disjunction' | 'unit';
+export declare function formatList(items: readonly string[], locale: string, type?: ListType): string;
+export type NumberFormat = 'decimal' | 'currency' | 'percent';
+export declare function formatNumber(value: number, locale: string, format?: NumberFormat, options?: Intl.NumberFormatOptions): string;
+export declare function formatCurrency(value: number, locale: string, currency?: string): string;
+export declare function formatCompactNumber(value: number, locale: string): string;
+export declare function createFormatter(locale: string, options?: FormatOptions): {
+    date: (value: Date | string | number, format?: DateFormat) => string;
+    time: (value: Date | string | number, format?: TimeFormat) => string;
+    dateTime: (value: Date | string | number, format?: TimeFormat) => string;
+    relativeDate: (value: Date | string | number, now?: Date | number) => string;
+    list: (items: readonly string[], type?: ListType) => string;
+    localeName: (code: string, type?: LocaleNameType) => string;
+    duration: (duration: Duration) => string;
+    number: (value: number, format?: NumberFormat, numberOptions?: Intl.NumberFormatOptions) => string;
+    currency: (value: number, currency?: string) => string;
+    compact: (value: number) => string;
+};

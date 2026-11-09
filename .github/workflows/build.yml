@@ -1,0 +1,77 @@
+name: Build and Upload to Releases CI
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PACKAGE_PREFIX: bun-nuxt
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Cache Bun dependencies
+        id: cache-deps
+        uses: actions/cache@v5
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies with Bun
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: bun install --frozen-lockfile
+
+      - name: Build Nuxt app with Bun
+        run: bun run build
+
+      - name: Stage build output
+        run: |
+          mkdir -p deploy
+          cp -r .output/. deploy/
+
+      - name: Install p7zip
+        run: sudo apt-get install -y p7zip-full
+
+      - name: Package into multiple formats
+        run: |
+          PREFIX="${{ env.PACKAGE_PREFIX }}"
+          SOURCE_DIR="./deploy"
+
+          # .tar.gz
+          tar -czf "${PREFIX}.tar.gz" -C "$SOURCE_DIR" .
+
+          # .zip
+          (cd "$SOURCE_DIR" && zip -q -r "../${PREFIX}.zip" .)
+
+          # .7z
+          (cd "$SOURCE_DIR" && 7z a -bd "../${PREFIX}.7z" . > /dev/null)
+
+      - name: Create Release and upload assets
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ github.sha }}
+          name: Build ${{ github.sha }}
+          files: |
+            ${{ env.PACKAGE_PREFIX }}.tar.gz
+            ${{ env.PACKAGE_PREFIX }}.zip
+            ${{ env.PACKAGE_PREFIX }}.7z
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

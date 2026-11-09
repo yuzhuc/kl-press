@@ -1,0 +1,25 @@
+{
+	"site": {
+		"title": {
+			"home": "Home",
+			"dashboard": "Dashboard"
+		},
+		"description": {
+			"home": "Welcome to my personal homepage",
+			"dashboard": "Welcome to my dashboard"
+		},
+		"notFound": {
+			"title": "ページが見つかりません",
+			"description": "リンクが切れているか、ページが移動した可能性があります。",
+			"back": "ダッシュボードへ"
+		}
+	},
+	"home": {
+		"greeting": "Hello, {name}!",
+		"intro": "Welcome to my website"
+	},
+	"dashboard": {
+		"greeting": "Dashboard",
+		"intro": "Welcome to my dashboard"
+	}
+}

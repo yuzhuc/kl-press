@@ -1,0 +1,148 @@
+{
+  "name": "@yuzhuc/i18n",
+  "version": "0.1.0",
+  "description": "Type-safe i18n for the Next.js App Router: one package, per-render-mode entry points.",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cjs/core.js",
+  "module": "./dist/esm/core.js",
+  "types": "./dist/esm/core.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/core.d.ts",
+        "default": "./dist/esm/core.js"
+      },
+      "require": {
+        "types": "./dist/cjs/core.d.ts",
+        "default": "./dist/cjs/core.js"
+      }
+    },
+    "./ssr": {
+      "import": {
+        "types": "./dist/esm/ssr.d.ts",
+        "default": "./dist/esm/ssr.js"
+      },
+      "require": {
+        "types": "./dist/cjs/ssr.d.ts",
+        "default": "./dist/cjs/ssr.js"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/esm/react.d.ts",
+        "default": "./dist/esm/react.js"
+      },
+      "require": {
+        "types": "./dist/cjs/react.d.ts",
+        "default": "./dist/cjs/react.js"
+      }
+    },
+    "./package.json": "./package.json",
+    "./next": {
+      "import": {
+        "types": "./dist/esm/next.d.ts",
+        "default": "./dist/esm/next.js"
+      },
+      "require": {
+        "types": "./dist/cjs/next.d.ts",
+        "default": "./dist/cjs/next.js"
+      }
+    },
+    "./format": {
+      "import": {
+        "types": "./dist/esm/format.d.ts",
+        "default": "./dist/esm/format.js"
+      },
+      "require": {
+        "types": "./dist/cjs/format.d.ts",
+        "default": "./dist/cjs/format.js"
+      }
+    },
+    "./seo": {
+      "import": {
+        "types": "./dist/esm/seo.d.ts",
+        "default": "./dist/esm/seo.js"
+      },
+      "require": {
+        "types": "./dist/cjs/seo.d.ts",
+        "default": "./dist/cjs/seo.js"
+      }
+    },
+    "./head": {
+      "import": {
+        "types": "./dist/esm/head.d.ts",
+        "default": "./dist/esm/head.js"
+      },
+      "require": {
+        "types": "./dist/cjs/head.d.ts",
+        "default": "./dist/cjs/head.js"
+      }
+    },
+    "./trans": {
+      "import": {
+        "types": "./dist/esm/trans.d.ts",
+        "default": "./dist/esm/trans.js"
+      },
+      "require": {
+        "types": "./dist/cjs/trans.d.ts",
+        "default": "./dist/cjs/trans.js"
+      }
+    },
+    "./routing": {
+      "import": {
+        "types": "./dist/esm/routing.d.ts",
+        "default": "./dist/esm/routing.js"
+      },
+      "require": {
+        "types": "./dist/cjs/routing.d.ts",
+        "default": "./dist/cjs/routing.js"
+      }
+    },
+    "./vue": {
+      "import": {
+        "types": "./dist/esm/vue.d.ts",
+        "default": "./dist/esm/vue.js"
+      },
+      "require": {
+        "types": "./dist/cjs/vue.d.ts",
+        "default": "./dist/cjs/vue.js"
+      }
+    },
+    "./nuxt": {
+      "import": {
+        "types": "./dist/esm/nuxt.d.ts",
+        "default": "./dist/esm/nuxt.js"
+      },
+      "require": {
+        "types": "./dist/cjs/nuxt.d.ts",
+        "default": "./dist/cjs/nuxt.js"
+      }
+    },
+    "./render": {
+      "import": {
+        "types": "./dist/esm/render.d.ts",
+        "default": "./dist/esm/render.js"
+      },
+      "require": {
+        "types": "./dist/cjs/render.d.ts",
+        "default": "./dist/cjs/render.js"
+      }
+    }
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "vue": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  }
+}
