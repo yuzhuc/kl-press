@@ -5614,14 +5614,14 @@ function p$4(n, s, r = false) {
 	let o = e.get(s);
 	return o === void 0 && (o = c(n, r).select(s), e.size >= u && e.clear(), e.set(s, o)), o;
 }
-var w$4 = /^(zero|one|two|few|many|other):(.*)$/;
+var w$3 = /^(zero|one|two|few|many|other):(.*)$/;
 var l$1 = /* @__PURE__ */ new Map();
 function g$2(n) {
 	let s = l$1.get(n);
 	if (s !== void 0) return s;
 	let r = null;
 	for (const t of n.split("|")) {
-		const e = w$4.exec(t);
+		const e = w$3.exec(t);
 		e !== null && (r ??= {}, r[e[1]] = e[2]);
 	}
 	return l$1.set(n, r), r;
@@ -5669,7 +5669,7 @@ var D$1 = new RegExp(`${m$3}(\\d+)${m$3}`, "g");
 function L$1(n, e) {
 	return e.length === 0 ? n : n.replace(D$1, (t, r) => e[Number(r)] ?? "");
 }
-function w$3(n, e) {
+function w$2(n, e) {
 	let t = 0;
 	for (let r = e; r < n.length; r++) {
 		const s = n[r];
@@ -5686,7 +5686,7 @@ function x$3(n) {
 		if (t >= n.length) break;
 		const r = /^([A-Za-z0-9_*=]+)\s*/.exec(n.slice(t));
 		if (r === null || (t += r[0].length, n[t] !== "{")) return null;
-		const s = w$3(n, t);
+		const s = w$2(n, t);
 		if (s === -1) return null;
 		e.push({
 			name: r[1],
@@ -5716,12 +5716,12 @@ function _$1(n) {
 		compactDisplay: n.includes("long") ? "long" : "short"
 	} : {};
 }
-var y$2 = /* @__PURE__ */ new Map();
+var y$3 = /* @__PURE__ */ new Map();
 var $$2 = /* @__PURE__ */ new Map();
 function I$2(n, e) {
 	const t = `${n}|${e}`;
-	let r = y$2.get(t);
-	return r === void 0 && (r = new Intl.NumberFormat(n, _$1(e)), y$2.set(t, r)), r;
+	let r = y$3.get(t);
+	return r === void 0 && (r = new Intl.NumberFormat(n, _$1(e)), y$3.set(t, r)), r;
 }
 function z$1(n, e, t, r) {
 	const s = `${n}|${e}|${t}|${r ?? ""}`;
@@ -5760,7 +5760,7 @@ function g$1(n) {
 			kind: "text",
 			value: n.slice(t, r)
 		});
-		const s = S$2.exec(n.slice(r)), c = w$3(n, r);
+		const s = S$2.exec(n.slice(r)), c = w$2(n, r);
 		if (s === null || c === -1) {
 			e.push({
 				kind: "raw",
@@ -5941,7 +5941,7 @@ function M$1(t, o) {
 	const e = x$2(t, o);
 	return typeof e == "string" ? e : void 0;
 }
-function w$2(t, o) {
+function w$1(t, o) {
 	return o ? t.replace(/\{(\w+)\}/g, (e, n) => l(o, n) ? String(o[n]) : e) : t;
 }
 function O(t, o) {
@@ -6375,7 +6375,7 @@ function N$1(a) {
 	return JSON.stringify(a).replace(/</g, `${f$2}u003c`).replace(/>/g, `${f$2}u003e`).replace(/&/g, `${f$2}u0026`);
 }
 // package/i18n/dist/esm/head.js
-function y$1(n, e) {
+function y$2(n, e) {
 	const a = S$1(n, {
 		locale: e.locale,
 		path: e.path,
@@ -6522,15 +6522,15 @@ function x(e$2, t) {
 		r = r.slice(0, l);
 	}
 }
-function y(e$3, t) {
+function y$1(e$3, t) {
 	return t.find((r) => e(r).startsWith(`${e$3}-`));
 }
-function w$1(e$4, t) {
+function w(e$4, t) {
 	const [r, ...n] = e$4.split("-"), l = t.filter((c) => e(c).split("-")[0] === r);
 	if (l.length !== 0) return l.find((c) => e(c).split("-").slice(1).some((i) => n.includes(i))) ?? l[0];
 }
 function h$3(e, t) {
-	return x(e, t) ?? y(e, t) ?? w$1(e, t);
+	return x(e, t) ?? y$1(e, t) ?? w(e, t);
 }
 function S(e$5, t, r = {}) {
 	const n = r.preference;
@@ -6760,7 +6760,7 @@ defineComponent({
 	},
 	setup(e) {
 		return () => {
-			const t = e.text !== void 0 ? w$2(e.text, e.values) : e.t !== void 0 && e.id !== void 0 ? e.t(e.id, e.values, e.options) : e.id !== void 0 ? w$2(String(e.id), e.values) : "";
+			const t = e.text !== void 0 ? w$1(e.text, e.values) : e.t !== void 0 && e.id !== void 0 ? e.t(e.id, e.values, e.options) : e.id !== void 0 ? w$1(String(e.id), e.values) : "";
 			return e.components === void 0 ? t : h(Fragment, null, h$1(p$1(t), e.components));
 		};
 	}
@@ -6776,7 +6776,7 @@ var defaultImage = {
 function useLocalePageMeta(path, title, description, options = {}) {
 	const { locale } = s$1();
 	const baseUrl = useBaseUrl();
-	useHead(() => y$1(i18n, {
+	useHead(() => y$2(i18n, {
 		locale: locale.value,
 		path,
 		baseUrl,
@@ -7020,7 +7020,7 @@ function s(e, n) {
 	const r = e[n.toLowerCase()];
 	return Array.isArray(r) ? r[0] ?? null : r ?? null;
 }
-function w(e, n, r = {}) {
+function y(e, n, r = {}) {
 	const o = r.cookie ?? "NEXT_LOCALE";
 	return S(e, s(n.headers, "accept-language"), { preference: b(s(n.headers, "cookie"), o) });
 }
@@ -7032,7 +7032,7 @@ function _(e, n = {}) {
 		const o = n.cookie ?? "NEXT_LOCALE", i = r.ssrContext?.event;
 		let c = n.locale;
 		const t = i === void 0 ? void 0 : k(i);
-		t !== void 0 && (c = w(e, { headers: t }, { cookie: o })), r.vueApp.use(R(e, { locale: c }));
+		t !== void 0 && (c = y(e, { headers: t }, { cookie: o })), r.vueApp.use(R(e, { locale: c }));
 	};
 }
 // virtual:nuxt:.nuxt%2Fplugins.server.mjs
