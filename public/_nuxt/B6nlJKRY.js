@@ -1,0 +1,1 @@
+import"./B1LQimsF.js";import{a as e,c as t,i as n,l as r,n as i,o as a,r as o,s,t as c}from"#entry";var l={class:`page`},u=a({__name:`home`,setup(a){let u=i(o);return c(`/home`,()=>u(`site.title.home`),()=>u(`site.description.home`)),(i,a)=>(s(),e(`div`,l,[n(`h1`,null,r(t(u)(`home.greeting`,{name:`访客`})),1),n(`p`,null,r(t(u)(`home.intro`)),1)]))}});export{u as default};
