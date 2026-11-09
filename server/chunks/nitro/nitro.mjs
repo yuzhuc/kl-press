@@ -4131,7 +4131,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "20489ea5-944f-4fe4-98dd-60c0dcccf52e",
+    "buildId": "4de760bc-3b00-4c8e-a3b7-a3ea1fc43222",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -5154,94 +5154,94 @@ const plugins = [
 ];
 
 const assets = {
-  "/android-chrome-192x192.png": {
-    "type": "image/png",
-    "etag": "\"388-zjsWbQVx97+UsoRIyTZMVObYWio\"",
-    "mtime": "2026-11-09T16:21:51.873Z",
-    "size": 904,
-    "path": "../public/android-chrome-192x192.png"
-  },
   "/android-chrome-512x512.png": {
     "type": "image/png",
     "etag": "\"1084-yyB3f4EpIk70oqt5DzLVLS1gnCE\"",
-    "mtime": "2026-11-09T16:21:51.873Z",
+    "mtime": "2026-11-09T16:26:14.673Z",
     "size": 4228,
     "path": "../public/android-chrome-512x512.png"
+  },
+  "/android-chrome-192x192.png": {
+    "type": "image/png",
+    "etag": "\"388-zjsWbQVx97+UsoRIyTZMVObYWio\"",
+    "mtime": "2026-11-09T16:26:14.673Z",
+    "size": 904,
+    "path": "../public/android-chrome-192x192.png"
   },
   "/apple-icon.png": {
     "type": "image/png",
     "etag": "\"350-VoTrQ5nxfjRLmZve1Prg0eapcBs\"",
-    "mtime": "2026-11-09T16:21:51.873Z",
+    "mtime": "2026-11-09T16:26:14.673Z",
     "size": 848,
     "path": "../public/apple-icon.png"
   },
   "/favicon.ico": {
     "type": "image/vnd.microsoft.icon",
     "etag": "\"10be-n8egyE9tcb7sKGr/pYCaQ4uWqxI\"",
-    "mtime": "2026-11-09T16:21:51.873Z",
+    "mtime": "2026-11-09T16:26:14.673Z",
     "size": 4286,
     "path": "../public/favicon.ico"
   },
   "/icon.svg": {
     "type": "image/svg+xml",
     "etag": "\"158-otyrwFYiUKsZLRSOBovolwyl4Gg\"",
-    "mtime": "2026-11-09T16:21:51.873Z",
+    "mtime": "2026-11-09T16:26:14.673Z",
     "size": 344,
     "path": "../public/icon.svg"
   },
   "/og.png": {
     "type": "image/png",
     "etag": "\"2d19-1HBwQ5NN7Z2+2eDofhbdJ7Re0pI\"",
-    "mtime": "2026-11-09T16:21:51.873Z",
+    "mtime": "2026-11-09T16:26:14.673Z",
     "size": 11545,
     "path": "../public/og.png"
   },
   "/_nuxt/B1LQimsF.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"f-SvBm/V2wr0KWtK2KeERReH6ucag\"",
-    "mtime": "2026-11-09T16:21:51.870Z",
+    "mtime": "2026-11-09T16:26:14.667Z",
     "size": 15,
     "path": "../public/_nuxt/B1LQimsF.js"
   },
   "/_nuxt/B6nlJKRY.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"178-gqumsR+33+a5B5ZNDEmUbOtsdbc\"",
-    "mtime": "2026-11-09T16:21:51.870Z",
+    "mtime": "2026-11-09T16:26:14.667Z",
     "size": 376,
     "path": "../public/_nuxt/B6nlJKRY.js"
   },
   "/_nuxt/DRJVRWf6.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"196-GdqB7hITOHjPsKRLkjA/33xlySQ\"",
-    "mtime": "2026-11-09T16:21:51.870Z",
+    "mtime": "2026-11-09T16:26:14.667Z",
     "size": 406,
     "path": "../public/_nuxt/DRJVRWf6.js"
   },
   "/_nuxt/entry.D4uV4WYy.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"310-pZ+D/mIvbghdpOXTTWbEfdrTn2M\"",
-    "mtime": "2026-11-09T16:21:51.870Z",
+    "mtime": "2026-11-09T16:26:14.667Z",
     "size": 784,
     "path": "../public/_nuxt/entry.D4uV4WYy.css"
   },
   "/_nuxt/builds/latest.json": {
     "type": "application/json",
-    "etag": "\"47-Y4huMdqnnOcnmJjMxgWYjIQyeNo\"",
-    "mtime": "2026-11-09T16:21:51.866Z",
+    "etag": "\"47-3DbmowiD90gjcW/nq80ZU9Cj6W4\"",
+    "mtime": "2026-11-09T16:26:14.662Z",
     "size": 71,
     "path": "../public/_nuxt/builds/latest.json"
   },
-  "/_nuxt/builds/meta/20489ea5-944f-4fe4-98dd-60c0dcccf52e.json": {
+  "/_nuxt/builds/meta/4de760bc-3b00-4c8e-a3b7-a3ea1fc43222.json": {
     "type": "application/json",
-    "etag": "\"58-2B8UWhMro/jYVuyn+y5x9hnBLHI\"",
-    "mtime": "2026-11-09T16:21:51.864Z",
+    "etag": "\"58-+4imouk9MjLnN2Gp+f4643gjbgY\"",
+    "mtime": "2026-11-09T16:26:14.657Z",
     "size": 88,
-    "path": "../public/_nuxt/builds/meta/20489ea5-944f-4fe4-98dd-60c0dcccf52e.json"
+    "path": "../public/_nuxt/builds/meta/4de760bc-3b00-4c8e-a3b7-a3ea1fc43222.json"
   },
   "/_nuxt/x4G6fgzo.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"30d33-1bBwwmInpaj495Gicegr/v7B9vY\"",
-    "mtime": "2026-11-09T16:21:51.870Z",
+    "mtime": "2026-11-09T16:26:14.667Z",
     "size": 199987,
     "path": "../public/_nuxt/x4G6fgzo.js"
   }
